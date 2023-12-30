@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uap Web</title>
+    <style>
+      body {
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        background-color: antiquewhite;
+        display: grid;
+      }
+      td {
+        border: 2px solid black;
+      }
+      .inputan_user {
+        margin-top: 20px;
+        border: 2px solid black;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+      }
+      .kode {
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 20px;
+        border: 2px solid black;
+      }
+      .barang {
+        border: 2px solid black;
+        margin-left: 12px;
+        margin-bottom: 20px;
+      }
+      .title {
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">UAP WEB</h1>
+    <table>
+      <tr>
+        <td>kode</td>
+        <td>Barang</td>
+        <td>Harga</td>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>Barang A</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>kode</td>
+        <td>Barang B</td>
+        <td>10000</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Barang C</td>
+        <td>15000</td>
+      </tr>
+    </table>
+    <div class="inputan_user">
+      <h1 class="title_2">Inputan User</h1>
+      <label>Masukkan Kode Barang</label>
+      <input class="kode" type="number" id="kode" />
+      <br />
+      <label>Masukkan Jumlah barang</label>
+      <input class="barang" type="number" id="barang" />
+      <br />
+      <button type="button" id="submit" onclick="input()">Submit</button>
+    </div>
+  </body>
+  <script>
+    let harga = [10000, 20000, 30000];
+    let kode = ["001", "002", "003"];
+
+    function input() {
+      let kode = document.getElementById("kode").value;
+      let barang = document.getElementById("barang").value;
+      let submit = document.getElementById("submit").value;
+
+      if (kode === "001") {
+        let total_barang = harga[0] * barang;
+        alert("Total harga: " + total_barang);
+        let uang = window.prompt("Masukkan uang anda: ");
+        let result = uang - total_barang;
+        alert("Kembalian anda: " + result);
+      } else if (kode === "002") {
+        let total_barang = harga[1] * barang;
+        alert("Total harga: " + total_barang);
+        let uang = window.prompt("Masukkan uang anda: ");
+        let result = uang - total_barang;
+        alert("Kembalian anda: " + result);
+      } else if (kode === "003") {
+        let total_barang = harga[2] * barang;
+        alert("Total harga: " + total_barang);
+        let uang = window.prompt("Masukkan uang anda: ");
+        let result = uang - total_barang;
+        alert("Kembalian anda: " + result);
+      } else {
+        alert("inputan anda kosong");
+      }
+    }
+  </script>
+</html>
